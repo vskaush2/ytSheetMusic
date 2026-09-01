@@ -5,6 +5,28 @@ Get sheet music from youtube videos
   - downloads, screenshots, crops, and combines sheet music elements
 ![ytSheetMusic](https://github.com/Wubaboo/ytSheetMusic/assets/59407231/05467c91-6bbb-4f25-a669-2e169cfc87d7)
 
+## Installation
+
+Dependencies are declared in `pyproject.toml`.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
+
+Or with [uv](https://docs.astral.sh/uv/):
+
+```bash
+uv sync
+```
+
+To also install the Flask dependencies needed to serve `app.py`, use the `server` extra
+(`pip install -e ".[server]"`, or `uv sync --extra server`).
+
+`ffmpeg` is not a Python package; install it separately (`brew install ffmpeg`) if yt-dlp
+needs to merge separate video and audio streams.
+
 **main.py**: 
 
   - Creates subsequent object classes and calls methods

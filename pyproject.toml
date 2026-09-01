@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ytsheetmusic"
+version = "0.1.0"
+description = "Get sheet music from YouTube videos: downloads, screenshots, crops, and combines sheet music elements"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Wubaboo", email = "59407231+Wubaboo@users.noreply.github.com" }]
+
+dependencies = [
+    "numpy>=1.20",
+    "opencv-python>=4.5",
+    "Pillow>=9.0",
+    "scikit-image>=0.18",
+    "psutil>=5.9",
+    "boto3>=1.26",
+    "yt-dlp>=2023.7.6",
+]
+
+[project.optional-dependencies]
+# Only needed to serve app.py
+server = [
+    "flask>=2.2",
+    "flask-cors>=3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Wubaboo/ytSheetMusic"
+
+[tool.setuptools]
+py-modules = ["main", "download", "screenshot", "combine", "awsServices"]
