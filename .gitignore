@@ -5,3 +5,14 @@
 *.webm
 *.exe
 *.sh
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
